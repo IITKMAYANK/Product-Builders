@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- it helps to make website responsive -->
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+     <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/Product-removebg-preview.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSES</a></li>
+                    <!-- <li><a href="blog.html">BLOG</a></li> -->
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Courses</h1> 
+
+     </section>
+
+<!-- <============== Courses =============>  -->
+
+<section class="course">
+
+    <h1>Upcoming Bootcamps</h1>
+    <p>Explore our course offerings and take the first step towards becoming a product management expert.</p>
+
+     <div class="row">
+        <div class="course-col">
+            <h1>Builders01</h1>
+            <h3 style="color: rgb(108, 73, 9);">Product Management Bootcamp</h3>
+            <p>Level up to product manager pro! This bootcamp equips you with everything from core concepts to advanced strategies.  You'll tackle 8 real-world projects, mastering user research, building prototypes, and analyzing data. Plus, a resume workshop helps you land your dream PM role!</p>
+        </div>
+        <div class="course-col">
+            <h1>Visualizers01</h1>
+            <h3 style="color: rgb(108, 73, 9);">Data Analytics Bootcamp</h3>
+            <p>Unleash your inner data whiz! Our Data Analytics Bootcamp transforms you from beginner to in-demand professional. Master essential tools like SQL, Python, and Tableau. Conquer 5 data-driven projects, learning to analyze, visualize, and tell data stories. Get career-ready with resume building guidance.</p>
+        </div>
+        <div class="course-col">
+            <h1>Pro-Visualizers01</h1>
+            <h3 style="color: rgb(108, 73, 9);"> Combined PM and Data Analytics</h3>
+            <p>This powerhouse bootcamp combines the best of both worlds: product management and data analytics.  Learn to translate user needs into successful products, leveraging the power of data.  Master core PM skills, user research, and data analysis through 8 hands-on projects. Craft a winning resume for your dream product management role, empowered by data insights!</p>
+        </div>
+     </div>
+
+</section>
+
+
+<!-- <============ Facilities ============> -->
+
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, neque?</p> -->
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="images/MENTORSHIP.png" alt="">
+            <h3>One-on-One Mentorship</h3>
+            <p>Get personalized guidance for your projects and clear up any doubts with our one-on-one mentorship program</p>
+
+        </div>
+        <div class="facilities-col">
+            <img src="images/resume.png" alt="">
+            <h3>Resume Building Session</h3>
+            <p>Highlight your PM skills and land your dream job with expert guidance in our resume workshops</p>
+            
+        </div>
+        <div class="facilities-col">
+            <img src="images/INTERVEW.png" alt="">
+            <h3>Mock Interviews</h3>
+            <p>Sharpen your PM skills and practice under pressure with our realistic Mock PM Interview sessions.</p>
+            
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+  <!-- ---------- Footer -----------  -->
+
+  <section class="footer">
+    <h4>About Us</h4>
+    <p>Unlock your potential with our comprehensive Product Management courses.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by Rishi </p>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <------------Javascript for Toggle Menu ------------> 
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script> 
+
+
+
+</body>
+</html>
