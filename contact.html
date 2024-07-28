@@ -56,18 +56,77 @@
             </div>
             <div class="contact-col">
 
-                <form action="form-handler.php" method="post">
+<!--                 <form action="form-handler.php" method="post">
          <input type="text" name="name" placeholder="Enter your name" required>
          <input type="email" name="email" placeholder="Enter email address" required>
          <input type="text" name="subject" placeholder="Enter your subject" required>
         <textarea rows="8" name="message" placeholder="Message"></textarea>
-        <button type="Submit" class="hero-btn red-btn">Send Message</button>
+        <button onClick={handleClick()} type="Submit" class="hero-btn red-btn">Send Message</button>
+                </form> -->
+
+                <form id="contact-form">
+                  <input type="text" name="name" placeholder="Enter your name" required>
+                  <input type="email" name="email" placeholder="Enter email address" required>
+                  <input type="text" name="subject" placeholder="Enter your subject" required>
+                  <textarea rows="8" name="message" placeholder="Message"></textarea>
+                  <button type="button" onclick="sendEmail()" class="hero-btn red-btn">Send Message</button>
                 </form>
+
+<!-- <script type="text/javascript">
+  function sendEmail() {
+    var name = document.querySelector('input[name="name"]').value;
+    var email = document.querySelector('input[name="email"]').value;
+    var subject = document.querySelector('input[name="subject"]').value;
+    var message = document.querySelector('textarea[name="message"]').value;
+
+    var templateParams = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+      }, function(error) {
+        console.log('FAILED...', error);
+        alert('Failed to send the message. Please try again.');
+      });
+  }
+</script> -->
+
 
 
             </div>
         </div>
     </section>
+
+        <script type="text/javascript">
+          function sendEmail() {
+            var name = document.querySelector('input[name="name"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var subject = document.querySelector('input[name="subject"]').value;
+            var message = document.querySelector('textarea[name="message"]').value;
+        
+            var templateParams = {
+              name: name,
+              email: email,
+              subject: subject,
+              message: message
+            };
+        
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+              .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message sent successfully!');
+              }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send the message. Please try again.');
+              });
+          }
+        </script>
 
 
 
