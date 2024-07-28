@@ -58,68 +58,13 @@
                 </div>
             </div>
             <div class="contact-col">
-
-<!--                 <form action="form-handler.php" method="post">
-         <input type="text" name="name" placeholder="Enter your name" required>
-         <input type="email" name="email" placeholder="Enter email address" required>
-         <input type="text" name="subject" placeholder="Enter your subject" required>
-        <textarea rows="8" name="message" placeholder="Message"></textarea>
-        <button onClick={handleClick()} type="Submit" class="hero-btn red-btn">Send Message</button>
-                </form> -->
-<form action="https://forms.gle/a24UgfesuoyiZc9q7" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-  <input type="text" name="entry.i1" placeholder="Enter your name" required>
-  <input type="email" name="entry.i5" placeholder="Enter email address" required>
-  <input type="text" name="entry.i9" placeholder="Enter your subject" required>
-  <textarea rows="8" name="entry.i13" placeholder="Message"></textarea>
+<form id="contact-form">
+  <input type="text" name="name" placeholder="Enter your name" required>
+  <input type="email" name="email" placeholder="Enter email address" required>
+  <input type="text" name="subject" placeholder="Enter your subject" required>
+  <textarea rows="8" name="message" placeholder="Message"></textarea>
   <button type="submit" class="hero-btn red-btn">Send Message</button>
 </form>
-                   
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Message sent successfully!'); }"></iframe>
-<script type="text/javascript">
-  var submitted = false;
-</script>
-
-<!-- " method="post" target="hidden_iframe" onsubmit="submitted=true;">
-                  <input type="text" name="entry.YOUR_NAME_ENTRY_ID" placeholder="Enter your name" required>
-                  <input type="email" name="entry.YOUR_EMAIL_ENTRY_ID" placeholder="Enter email address" required>
-                  <input type="text" name="entry.YOUR_SUBJECT_ENTRY_ID" placeholder="Enter your subject" required>
-                  <textarea rows="8" name="entry.YOUR_MESSAGE_ENTRY_ID" placeholder="Message"></textarea>
-                  <button type="submit" class="hero-btn red-btn">Send Message</button>
-                </form>
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Message sent successfully!'); }"></iframe>
-
-<script type="text/javascript">
-  var submitted = false;
-</script>
- -->
-
-
-<!-- <script type="text/javascript">
-  function sendEmail() {
-    var name = document.querySelector('input[name="name"]').value;
-    var email = document.querySelector('input[name="email"]').value;
-    var subject = document.querySelector('input[name="subject"]').value;
-    var message = document.querySelector('textarea[name="message"]').value;
-
-    var templateParams = {
-      name: name,
-      email: email,
-      subject: subject,
-      message: message
-    };
-
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Message sent successfully!');
-      }, function(error) {
-        console.log('FAILED...', error);
-        alert('Failed to send the message. Please try again.');
-      });
-  }
-</script> -->
 
 
 
@@ -128,7 +73,22 @@
     </section>
 
 
-   
+   <script type="text/javascript">
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var form = event.target;
+    var name = form.querySelector('input[name="name"]').value;
+    var email = form.querySelector('input[name="email"]').value;
+    var subject = form.querySelector('input[name="subject"]').value;
+    var message = form.querySelector('textarea[name="message"]').value;
+
+    var mailtoLink = `mailto:teamproductbuilders@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+
+    window.location.href = mailtoLink;
+  });
+</script>
+
 
 
 
