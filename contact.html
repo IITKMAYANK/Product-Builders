@@ -66,16 +66,14 @@
         <textarea rows="8" name="message" placeholder="Message"></textarea>
         <button onClick={handleClick()} type="Submit" class="hero-btn red-btn">Send Message</button>
                 </form> -->
-
+<form action="https://forms.gle/a24UgfesuoyiZc9q7" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+  <input type="text" name="entry.YOUR_NAME_ENTRY_ID" placeholder="Enter your name" required>
+  <input type="email" name="entry.YOUR_EMAIL_ENTRY_ID" placeholder="Enter email address" required>
+  <input type="text" name="entry.YOUR_SUBJECT_ENTRY_ID" placeholder="Enter your subject" required>
+  <textarea rows="8" name="entry.YOUR_MESSAGE_ENTRY_ID" placeholder="Message"></textarea>
+  <button type="submit" class="hero-btn red-btn">Send Message</button>
+</form>
                    
-
-                <form action="<form action="https://forms.gle/GvXTUuphZsqqxmfW8" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-                  <input type="text" name="entry.YOUR_NAME_ENTRY_ID" placeholder="Enter your name" required>
-                  <input type="email" name="entry.YOUR_EMAIL_ENTRY_ID" placeholder="Enter email address" required>
-                  <input type="text" name="entry.YOUR_SUBJECT_ENTRY_ID" placeholder="Enter your subject" required>
-                  <textarea rows="8" name="entry.YOUR_MESSAGE_ENTRY_ID" placeholder="Message"></textarea>
-                  <button type="submit" class="hero-btn red-btn">Send Message</button>
-                </form>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Message sent successfully!'); }"></iframe>
 
