@@ -67,16 +67,18 @@
         <button onClick={handleClick()} type="Submit" class="hero-btn red-btn">Send Message</button>
                 </form> -->
 <form action="https://forms.gle/a24UgfesuoyiZc9q7" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-  <input type="text" name="entry.YOUR_NAME_ENTRY_ID" placeholder="Enter your name" required>
-  <input type="email" name="entry.YOUR_EMAIL_ENTRY_ID" placeholder="Enter email address" required>
-  <input type="text" name="entry.YOUR_SUBJECT_ENTRY_ID" placeholder="Enter your subject" required>
-  <textarea rows="8" name="entry.YOUR_MESSAGE_ENTRY_ID" placeholder="Message"></textarea>
+  <input type="text" name="entry.i1" placeholder="Enter your name" required>
+  <input type="email" name="entry.i5" placeholder="Enter email address" required>
+  <input type="text" name="entry.i9" placeholder="Enter your subject" required>
+  <textarea rows="8" name="entry.i13" placeholder="Message"></textarea>
   <button type="submit" class="hero-btn red-btn">Send Message</button>
 </form>
                    
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Message sent successfully!'); }"></iframe>
-
+<script type="text/javascript">
+  var submitted = false;
+</script>
 
 <!-- " method="post" target="hidden_iframe" onsubmit="submitted=true;">
                   <input type="text" name="entry.YOUR_NAME_ENTRY_ID" placeholder="Enter your name" required>
@@ -124,9 +126,7 @@
             </div>
         </div>
     </section>
-<script type="text/javascript">
-  var submitted = false;
-</script>
+
 
    
 
