@@ -72,13 +72,14 @@
         <button onClick={handleClick()} type="Submit" class="hero-btn red-btn">Send Message</button>
                 </form> -->
 
-                    <form action="form-handler.php" method="post" id="contact-form">
+                   <form id="contact-form">
                       <input type="text" name="name" placeholder="Enter your name" required>
                       <input type="email" name="email" placeholder="Enter email address" required>
                       <input type="text" name="subject" placeholder="Enter your subject" required>
                       <textarea rows="8" name="message" placeholder="Message"></textarea>
-                      <button type="Submit" class="hero-btn red-btn">Send Message</button>
+                      <button type="submit" class="hero-btn red-btn">Send Message</button>
                     </form>
+
 
 <!-- <script type="text/javascript">
   function sendEmail() {
@@ -111,31 +112,22 @@
         </div>
     </section>
 
-<script type="text/javascript">
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
 
-    var form = event.target;
-    var formData = new FormData(form);
-
-    var templateParams = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message')
-    };
-
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Message sent successfully!');
-        form.reset(); // Reset the form after successful submission
-      }, function(error) {
-        console.log('FAILED...', error);
-        alert('Failed to send the message. Please try again.');
+    <script type="text/javascript">
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        var form = event.target;
+        var name = form.querySelector('input[name="name"]').value;
+        var email = form.querySelector('input[name="email"]').value;
+        var subject = form.querySelector('input[name="subject"]').value;
+        var message = form.querySelector('textarea[name="message"]').value;
+    
+        var mailtoLink = `mailto:teamproductbuilders@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+    
+        window.location.href = mailtoLink;
       });
-  });
-</script>
+    </script>
 
 
 
